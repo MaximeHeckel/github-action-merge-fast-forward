@@ -1,0 +1,16 @@
+name: 'Merge Fast Forward Only'
+author: 'Maxime Heckel'
+description: 'Run a git merge --ff-only [branch] in a Github workflow'
+inputs:
+  branchtomerge:
+    description: 'Branch to merge'
+    required: true
+  branch:
+    description: 'Branch that will be updated'
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+branding:
+  icon: 'git-merge'
+  color: 'white'
