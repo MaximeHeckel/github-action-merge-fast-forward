@@ -34,7 +34,7 @@ const rebase = async (args: RebaseArgs): Promise<void> => {
   await git(['fetch', 'origin', args.branchtomerge]);
   await git(['fetch', 'origin', args.branch]);
   await git(['checkout', `origin/${args.branch}`]);
-  await git(['merge', '--ff-only', `origin/${args.branchtomerge}`, '--allow-unrelated-histories ']);
+  await git(['merge', '--ff-only', '--allow-unrelated-histories ', `origin/${args.branchtomerge}`]);
   await git(['push', 'origin', `${args.branch}`]);
 };
 
