@@ -12359,7 +12359,7 @@ const rebase = async (args) => {
     await git(['fetch', 'origin', args.branchtomerge]);
     await git(['fetch', 'origin', args.branch]);
     await git(['checkout', `origin/${args.branch}`]);
-    await git(['merge', '--ff-only', `origin/${args.branchtomerge}`, '--allow-unrelated-histories']);
+    await git(['merge', '--ff-only', `origin/${args.branchtomerge}`, '--allow-unrelated-histories ']);
     await git(['push', 'origin', `${args.branch}`]);
 };
 const run = async () => {
