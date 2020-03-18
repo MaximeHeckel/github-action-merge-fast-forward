@@ -12356,8 +12356,7 @@ const git = (args) => {
 const rebase = async (args) => {
     await git(['config', '--local', 'user.name', args.username]);
     await git(['config', '--local', 'user.email', args.email]);
-    await git(['fetch', args.branchtomerge]);
-    await git(['fetch', args.branch]);
+    await git(['fetch', '--all']);
     await git(['checkout', args.branch]);
     await git(['merge', '--ff-only', args.branchtomerge]);
     await git(['push', 'origin', `${args.branch}`]);
