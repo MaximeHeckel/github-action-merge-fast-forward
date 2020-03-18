@@ -12356,10 +12356,10 @@ const git = (args) => {
 const rebase = async (args) => {
     await git(['config', '--local', 'user.name', args.username]);
     await git(['config', '--local', 'user.email', args.email]);
-    await git(['fetch', 'origin', args.branchtomerge]);
-    await git(['fetch', 'origin', args.branch]);
+    await git(['fetch', 'origin', args.branchtomerge, '--unshallow']);
+    await git(['fetch', 'origin', args.branch, '--unshallow']);
     await git(['checkout', `origin/${args.branch}`]);
-    await git(['merge', '--ff-only', '--allow-unrelated-histories ', `origin/${args.branchtomerge}`]);
+    await git(['merge', '--ff-only', `origin/${args.branchtomerge}`]);
     await git(['push', 'origin', `${args.branch}`]);
 };
 const run = async () => {

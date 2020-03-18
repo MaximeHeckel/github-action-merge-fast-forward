@@ -31,10 +31,10 @@ interface RebaseArgs {
 const rebase = async (args: RebaseArgs): Promise<void> => {
   await git(['config', '--local', 'user.name', args.username]);
   await git(['config', '--local', 'user.email', args.email]);
-  await git(['fetch', 'origin', args.branchtomerge]);
-  await git(['fetch', 'origin', args.branch]);
+  await git(['fetch', 'origin', args.branchtomerge, '--unshallow']);
+  await git(['fetch', 'origin', args.branch, '--unshallow']);
   await git(['checkout', `origin/${args.branch}`]);
-  await git(['merge', '--ff-only', '--allow-unrelated-histories ', `origin/${args.branchtomerge}`]);
+  await git(['merge', '--ff-only', `origin/${args.branchtomerge}`]);
   await git(['push', 'origin', `${args.branch}`]);
 };
 
