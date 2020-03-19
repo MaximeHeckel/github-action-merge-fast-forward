@@ -1,5 +1,12 @@
 # Github Action Merge Fast Forward
 
+# [1.1.0](https://github.com/MaximeHeckel/github-action-merge-fast-forward/compare/v1.0.1...v1.1.0) (2020-03-19)
+
+
+### Features
+
+* **action:** Cleaner error output ([50037dd](https://github.com/MaximeHeckel/github-action-merge-fast-forward/commit/50037dd83e4b6976d9e6ea18d3ee6a62d76722e6))
+
 ## [1.0.1](https://github.com/MaximeHeckel/github-action-merge-fast-forward/compare/v1.0.0...v1.0.1) (2020-03-19)
 
 
