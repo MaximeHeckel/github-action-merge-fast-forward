@@ -1,5 +1,12 @@
 # Github Action Merge Fast Forward
 
+## [1.0.1](https://github.com/MaximeHeckel/github-action-merge-fast-forward/compare/v1.0.0...v1.0.1) (2020-03-19)
+
+
+### Bug Fixes
+
+* **release:** Test action on publish flow ([eeeb2ce](https://github.com/MaximeHeckel/github-action-merge-fast-forward/commit/eeeb2ce25a4035f38cd48b601a10d55c84f173a9))
+
 # 1.0.0 (2020-03-19)
 
 
