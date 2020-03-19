@@ -21,3 +21,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
+      - name: Merge to master
+        uses: MaximeHeckel/github-action-merge-fast-forward@v1.0.0
+        with:
+          branchtomerge: 'publish'
+          branch: 'master'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
