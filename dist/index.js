@@ -12380,8 +12380,6 @@ const run = async () => {
         });
     }
     catch (e) {
-        await git(['status']);
-        await git(['diff']);
         console.error(e);
         core.setFailed(execLogs);
     }
