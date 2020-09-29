@@ -4,6 +4,8 @@ import * as Github from '@actions/github';
 
 const ghClient = process.env.GITHUB_TOKEN && new Github.GitHub(process.env.GITHUB_TOKEN);
 
+const { GITHUB_REPOSITORY = '' } = process.env;
+
 let execLogs = '';
 
 const execOptions = {
@@ -40,9 +42,7 @@ const rebase = async (args: RebaseArgs): Promise<void> => {
 const run = async (): Promise<void> => {
   const branchtomerge = core.getInput('branchtomerge');
   const branch = core.getInput('branch');
-  const context = await Github.context;
-  const repo = context.payload.repository!.full_name!.split('/');
-  const [owner] = repo!;
+  const [owner] = GITHUB_REPOSITORY.split('/');
 
   const client = ghClient;
 
