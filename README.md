@@ -7,7 +7,7 @@ A simple Github action for run `git merge --ff-only BRANCH` in a Github CI workf
 
 Example configuration:
 
-```
+```yml
 name: 'Merge to Development'
 on:
   workflow_dispatch:
