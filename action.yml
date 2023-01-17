@@ -9,7 +9,7 @@ inputs:
     description: 'Branch that will be updated'
     required: true
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'dist/index.js'
 branding:
   icon: 'git-merge'

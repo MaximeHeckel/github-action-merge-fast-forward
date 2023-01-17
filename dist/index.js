@@ -12339,6 +12339,7 @@ const core = __importStar(__webpack_require__(470));
 const exec = __importStar(__webpack_require__(986));
 const Github = __importStar(__webpack_require__(469));
 const ghClient = process.env.GITHUB_TOKEN && new Github.GitHub(process.env.GITHUB_TOKEN);
+const { GITHUB_REPOSITORY = '' } = process.env;
 let execLogs = '';
 const execOptions = {
     listeners: {
@@ -12364,9 +12365,7 @@ const rebase = async (args) => {
 const run = async () => {
     const branchtomerge = core.getInput('branchtomerge');
     const branch = core.getInput('branch');
-    const context = await Github.context;
-    const repo = context.payload.repository.full_name.split('/');
-    const [owner] = repo;
+    const [owner] = GITHUB_REPOSITORY.split('/');
     const client = ghClient;
     if (!client)
         throw 'Failed to load Github client from token.';
