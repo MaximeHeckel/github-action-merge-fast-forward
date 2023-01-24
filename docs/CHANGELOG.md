@@ -1,5 +1,12 @@
 # Github Action Merge Fast Forward
 
+## [1.1.1](https://github.com/MaximeHeckel/github-action-merge-fast-forward/compare/v1.1.0...v1.1.1) (2023-01-24)
+
+
+### Bug Fixes
+
+* fixed error thrown when running using a scheduled workflow ([109199d](https://github.com/MaximeHeckel/github-action-merge-fast-forward/commit/109199d13572d68ff42e3c641d88ff9140966c24))
+
 # [1.1.0](https://github.com/MaximeHeckel/github-action-merge-fast-forward/compare/v1.0.1...v1.1.0) (2020-03-19)
 
 
